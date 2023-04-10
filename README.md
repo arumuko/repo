@@ -1,64 +1,64 @@
 # repo
 # Repo Command
 
-This repository contains a custom Zsh script named \`repo.zsh\` that allows you to list and change directories from a pre-defined list of directories stored in a \`repo_list.txt\` file. It also supports adding the current directory to the list of directories.
+This repository contains a custom Zsh script named `repo.zsh` that allows you to list and change directories from a pre-defined list of directories stored in a `repo_list.txt` file. It also supports adding the current directory to the list of directories.
 
 ## Prerequisites
 
 1. Make sure you have Zsh installed and set as your default shell.
-2. Install \`peco\` using the following command:
+2. Install `peco` using the following command:
 
-\```bash
+```bash
 brew install peco
-\```
+```
 
 ## Installation
 
 1. Clone this repository to your local machine:
 
-\```bash
+```bash
 git clone https://github.com/arumuko/repo.git
-\```
+```
 
-2. Move the \`repo.zsh\` file to a directory in your \`PATH\` environment variable, for example, \`~/scripts\`:
+2. Move the `repo.zsh` file to a directory in your `PATH` environment variable, for example, `~/scripts`:
 
-\```bash
+```bash
 mkdir -p ~/scripts
 mv path/to/repo.zsh ~/scripts/repo.zsh
 chmod +x ~/scripts/repo.zsh
-\```
+```
 
-3. Add the following line to your \`.zshrc\` file to include the script directory in the \`PATH\` environment variable:
+3. Add the following line to your `.zshrc` file to include the script directory in the `PATH` environment variable:
 
-\```bash
+```bash
 export PATH="$HOME/scripts:$PATH"
-\```
+```
 
-4. Add the following alias to your \`.zshrc\` file:
+4. Add the following alias to your `.zshrc` file:
 
-\```bash
+```bash
 alias repo='eval $(repo.zsh)'
-\```
+```
 
-5. Source your \`.zshrc\` file to apply the changes:
+5. Source your `.zshrc` file to apply the changes:
 
-\```bash
+```bash
 source ~/.zshrc
-\```
+```
 
 ## Usage
 
-- To list and change directories from the pre-defined list of directories, simply run the \`repo\` command. This will display the list of directories using \`peco\`, and you can select a directory to change to:
+- To list and change directories from the pre-defined list of directories, simply run the `repo` command. This will display the list of directories using `peco`, and you can select a directory to change to:
 
-\```bash
+```bash
 repo
-\```
+```
 
-- To add the current directory to the list of directories, use the \`-a\` option:
+- To add the current directory to the list of directories, use the `-a` option:
 
-\```bash
+```bash
 repo -a
-\```
+```
 
 ## Contributing
 
